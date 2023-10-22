@@ -6,7 +6,7 @@ class Program
     {
         //predefined scripture
         string referenceText = "John 3:16";
-        string scriptureText = "Insert scripture here";
+        string scriptureText = "16 For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
 
         //create scripture object w/ predefined reference and text
         Scripture scripture = new Scripture(referenceText, scriptureText);
