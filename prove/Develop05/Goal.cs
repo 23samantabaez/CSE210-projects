@@ -66,6 +66,8 @@ class Goal
             countDetail = $" - done {_eventCount} times. ";
         }
 
-        Console.Write($"[{statusString} {_goalName} ({_goalDescription}) {countDetail}]"); //add countDetail?
+        Console.Write($"[{statusString} {_goalName} ({_goalDescription}) {countDetail}]");
     }
+
+    string filename = "myFile.txt";
 }
