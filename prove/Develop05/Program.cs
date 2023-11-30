@@ -68,19 +68,22 @@ class Program
                 if (goalType == "1")
                 {
                     Console.WriteLine("You chose a simple goal");
-                    new SimpleGoal();
+                    SimpleGoal simple = new SimpleGoal();
+                    goals.Add(simple);
                     Console.ReadLine();
                 }
                 else if (goalType == "2")
                 {
                     Console.WriteLine("You chose an eternal goal");
-                    new EternalGoal();
+                    EternalGoal eternal = new EternalGoal();
+                    goals.Add(eternal);
                     Console.ReadLine();
                 }
                 else if (goalType == "3")
                 {
                     Console.WriteLine("You chose a checklist goal");
-                    new ChecklistGoal();
+                    ChecklistGoal checklist = new ChecklistGoal();
+                    goals.Add(checklist);
                     Console.ReadLine();
                 }
             }
@@ -150,7 +153,7 @@ class Program
             if (selectedItem == "5") //Recording Goals
             {
                 Console.WriteLine("option five");
-                Console.WriteLine("What goal do you want to complete? ");
+                Console.WriteLine("What goal (number) do you want to complete? ");
                 int selectedIndex = int.Parse(Console.ReadLine());
                 var goal = goals[selectedIndex - 1];
                 //_totalPoints += goal.RecordEvent();
@@ -158,13 +161,13 @@ class Program
             }
 
             selectedItem = DisplayMenu(); // get user input agin inside loop to update selectedItem, to break loop
-        }
 
-        /*else
-        {
-            Console.WriteLine("Please select an option from the menu");
-            Console.ReadLine();
-        }*/
+            /*else
+            {
+                Console.WriteLine("Please select an option from the menu");
+                Console.ReadLine();
+            }*/
+        }
         
     }
 }
