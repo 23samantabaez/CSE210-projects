@@ -5,44 +5,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine();
+        Console.WriteLine("VIDEOS: ");
+        Console.WriteLine();
         
-        //video objects
-        Video _video1 = new Video("Title vid 1", "Author vid 1", 180);
-        Video _video2 = new Video("Title vid 2", "Author vid 2", 150);
-        Video _video3 = new Video("Title vid 3", "Author vid 3", 175);
-            
-        //comments
-        _video1.AddComment("Commenter 1A", "This is comment 1A");
-        _video1.AddComment("Commenter 1B", "This is comment 1B");
-        _video1.AddComment("Commenter 1C", "This is comment 1C");
+        // Video objects
+        Video video1 = new Video("Product Honest Review", "Mike Jacobs", 120);
+        Video video2 = new Video("The only product you'll ever need!", "Larry Harness", 180);
+        Video video3 = new Video("Product reaction, first impressions!", "Bill Baker", 150);
 
-        _video2.AddComment("Commenter 2A", "This is comment 2A");
-        _video2.AddComment("Commenter 2B", "This is comment 2B");
-        _video2.AddComment("Commenter 2C", "This is comment 2C");
+        // Adding comments to videos
+        video1.AddComment("User329", "Love it!");
+        video1.AddComment("UserCutiePie", "Great Video");
+        video1.AddComment("UserHIHI", "I agree!");
 
-        _video3.AddComment("Commenter 3A", "This is comment 3A");
-        _video3.AddComment("Commenter 3B", "This is comment 3B");
-        _video3.AddComment("Commenter 3C", "This is comment 3C");
+        video2.AddComment("User89", "Amazing!");
+        video2.AddComment("UserLOL", "Very entertaining");
 
-        //List
-        List<Video> videosList = new List<Video> {_video1, _video2, _video3};
+        video3.AddComment("User62", "Nice video");
+        video3.AddComment("UserPinky", "Thanks for sharing");
+        video3.AddComment("User2003", "I will buy it!");
 
-        //Iterate through the videos and display their info
-        foreach (var video in videosList)
+        List<Video> videos = new List<Video> { video1, video2, video3 };  // Adding videos to list
+
+
+        foreach (var video in videos) // Display vid info
         {
-            Console.WriteLine($"Title: {video._title}"); //Video Title
-            Console.WriteLine($"Author: {video._author}"); //Author
-            Console.WriteLine($"Length: {video._length}"); //Length
-            Console.WriteLine($"Comments: "); //Comments
-            this.commentsList = commentsList; //foreach (var comment in video.commentsList) this.commentsList = commentsList;
+            Console.WriteLine($"Title: {video.Title}");
+            Console.WriteLine($"Author: {video.Author}");
+            Console.WriteLine($"Length: {video.Length} seconds");
+            Console.WriteLine($"Number of Comments: {video.GetNumberOfComments()}");
+
+            Console.WriteLine("Comments:");
+            foreach (var comment in video.Comments)
             {
-                Console.WriteLine($"{_commenterName} - {_commentContent}");
+                Console.WriteLine($"- {comment.UserName}: {comment.Text}");
             }
-            Console.WriteLine();
+
+            Console.WriteLine(); // Separation
         }
-        
-        Console.ReadLine(); // Keeps the console window open (optional)
     }
 }
 

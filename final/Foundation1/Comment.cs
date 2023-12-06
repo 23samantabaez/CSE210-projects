@@ -1,13 +1,15 @@
+using System;
+using System.Collections.Generic;
 
 class Comment
 {
-    public string _commenterName { get; }
-    public string _commentContent { get; }
+    public string UserName { get; }
+    public string Text { get; }
 
-    public Comment(string commenterName, string commentContent)
+    public Comment(string userName, string text)
     {
-        _commenterName = commenterName;
-        _commentContent = commentContent;
+        UserName = userName;
+        Text = text;
     }
 }
 
