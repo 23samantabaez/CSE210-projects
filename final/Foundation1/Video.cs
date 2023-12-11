@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 class Video
 {
-    public string Title { get; }
-    public string Author { get; }
-    public int Length { get; }
+    public string _title { get; }
+    public string _author { get; }
+    public int _length { get; }
     public List<Comment> Comments { get; }
 
     public Video(string title, string author, int length)
     {
-        Title = title;
-        Author = author;
-        Length = length;
+        _title = title;
+        _author = author;
+        _length = length;
         Comments = new List<Comment>();
     }
 

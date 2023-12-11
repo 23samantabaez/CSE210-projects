@@ -46,13 +46,8 @@ public class Address
         return _country;
     }
 
-    public float GetShippingCost()
-    {
-        return _shippingCost;
-    }
-
     //methods
-    public float LiveInUsa()
+    public float LiveInUsa() //method to determine if the address is in the US or not
     {
         if (_country == "United States")
         {

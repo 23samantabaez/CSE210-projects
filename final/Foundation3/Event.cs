@@ -14,12 +14,12 @@ using System.Collections.Generic;
 
 class Event
 {
-    //declare variables (make em priv)
-    private string _eventTitle;
-    private string _eventDescription;
-    private string _eventDate;
-    private string _eventTime;
-    private string _eventAddress;
+    //declare variables
+    protected string _eventTitle;
+    protected string _eventDescription;
+    protected string _eventDate;
+    protected string _eventTime;
+    protected string _eventAddress;
     protected string _eventType;
 
     //constructors
@@ -81,7 +81,7 @@ class Event
 
     public string GetShortDescription()
     {
-        return $"Event type: {GetEventType()}\nTitle: {_eventTitle}\nDate: {_eventDate} ";
-    } 
+        return $"Event type: {_eventType}\nTitle: {_eventTitle}\nDate: {_eventDate} ";
+    }
 
 }

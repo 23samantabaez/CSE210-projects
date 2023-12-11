@@ -31,15 +31,15 @@ class Program
 
         foreach (var video in videos) // Display vid info
         {
-            Console.WriteLine($"Title: {video.Title}");
-            Console.WriteLine($"Author: {video.Author}");
-            Console.WriteLine($"Length: {video.Length} seconds");
+            Console.WriteLine($"Title: {video._title}");
+            Console.WriteLine($"Author: {video._author}");
+            Console.WriteLine($"Length: {video._length} seconds");
             Console.WriteLine($"Number of Comments: {video.GetNumberOfComments()}");
 
             Console.WriteLine("Comments:");
             foreach (var comment in video.Comments)
             {
-                Console.WriteLine($"- {comment.UserName}: {comment.Text}");
+                Console.WriteLine($"- {comment._userName}: {comment._text}");
             }
 
             Console.WriteLine(); // Separation

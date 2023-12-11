@@ -22,12 +22,16 @@ public class Order
 
     }
 
+    public float GetShippingCost()
+    {
+        return _shippingCost;
+    }
+
     public Order(Address address)
     {
         _shippingCost= address.LiveInUsa();
         _address = address;
     }
-
 
     public void AddProduct(Product product)
     {
@@ -51,7 +55,7 @@ public class Order
         return $"{_customer.GetCustomerName()}";
     }
 
-    public float TotalOrder()
+    public float TotalOrder() //method to get total price
     {
         float totalPrice = 0;
         foreach (Product product in _products)
